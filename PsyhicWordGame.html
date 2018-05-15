@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+                <meta charset="UTF-8">
+                <title>Pyshic Game</title>
+</head>
+<body>
+
+<div id ="game"
+// Guess what letter im thinking og
+// There are a total of 9 chances
+//Every time you guess correctly there are an additional nine chances or you lose one for each incorrect guess
+//Compare a user's guesses to the computer guesses
+<p> Press a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,u,z to start playing </p>
+ </p>
+</div>
+
+
+<script type="text/javascript">
+
+        var options =["a","b", "c","d","e","f","g","h","i","j","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+        var wins = 0 ;
+        var loses = 0 ;
+        var guesses_chosen = [];
+        var guesses_remaining = 9 ;
+        document.onkeyup = function(event) {
+        var userguess = String.fromCharCode(event.keyCode).
+         toLowerCase();
+console.log(userguess);
+
+        var computerGuess = options[Math.floor(Math.random()*options.length)];
+        console.log(userguess);
+        if (userguess==='a'|| userguess=='b'|| userguess==='c' || userguess==='d' ||userguess=='e' ||userguess=='f' || userguess=='g' ||userguess=='h' ||userguess=='i' ||userguess=='j' ||userguess=='k' || userguess== "l"|| userguess=='m' ||userguess=='n' ||userguess=='o' ||userguess=='q' ||userguess=='r' ||userguess =='t' || userguess =='u' || userguess =='v'|| userguess =='w' || userguess == 'x'|| userguess =='y'|| userguess == 'z'){
+
+        alert( "Wins + wins"); 
+}
+        if (userguess=='computerGuess') {
+        wins++;
+        alert("You have won");
+
+        }
+
+         else {
+        //any letter in the alphabet
+        alert("Please choose a, b, c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z"); }}
+
+
+</script>
+
+</body>
+</html>
