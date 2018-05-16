@@ -22,19 +22,18 @@
         var wins = 0 ;
         var loses = 0 ;
         var guesses_chosen = [];
-        var guesses_remaining = 9 ;
+        var guesses_remaining = 9 ;var computerGuess = options[Math.floor(Math.random()*options.length)];
+        console.log(computerGuess);
         document.onkeyup = function(event) {
-        var userguess = String.fromCharCode(event.keyCode).
-         toLowerCase();
-console.log(userguess);
+                console.log(event)
+        var userguess = event.key
+console.log(userguess)
 
-        var computerGuess = options[Math.floor(Math.random()*options.length)];
-        console.log(userguess);
-        if (userguess==='a'|| userguess=='b'|| userguess==='c' || userguess==='d' ||userguess=='e' ||userguess=='f' || userguess=='g' ||userguess=='h' ||userguess=='i' ||userguess=='j' ||userguess=='k' || userguess== "l"|| userguess=='m' ||userguess=='n' ||userguess=='o' ||userguess=='q' ||userguess=='r' ||userguess =='t' || userguess =='u' || userguess =='v'|| userguess =='w' || userguess == 'x'|| userguess =='y'|| userguess == 'z'){
+        
+        // if (userguess==='a'|| userguess=='b'|| userguess==='c' || userguess==='d' ||userguess==='e' ||userguess==='f' || userguess==='g' ||userguess==='h' ||userguess=='i' ||userguess==='j' ||userguess=='k' || userguess=== "l"|| userguess==='m' ||userguess==='n' ||userguess==='o' ||userguess=='q' ||userguess==='r' ||userguess ==='t' || userguess ==='u' || userguess==='v'|| userguess ==='w' || userguess == 'x'|| userguess =='y'|| userguess == 'z'){
 
-        alert( "Wins + wins"); 
-}
-        if (userguess=='computerGuess') {
+
+        if (userguess===computerGuess) {
         wins++;
         alert("You have won");
 
