@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <title>Pyshic Game</title>
+</head>
+<body>
+<!-- 
+         Guess what letter im thinking og // There are a total of 9 chances //Every time you guess correctly there
+         are an additional nine chances or you lose one for each incorrect guess //Compare a user 's guesses to the computer guesses -->
+        
+        <p>Wins: <span id="wins">0</span></p>
+        <p>loses: <span id="loses">0</span></p>
+        <p>Guesses Choosen: <span id="guesses-choosen"></span></p>
+        <p>Guesses remaining: <span id="guesses-remaining"></span></p>
+        
+<p> Press a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,u,z to start playing </p>
+ </p>
+</div>
+<script type="text/javascript">
+        var options =["a","b", "c","d","e","f","g","h","i","j","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+        var wins = 0 ;
+        var losses = 0 ;
+        var guesses_chosen = [];
+        var guesses_remaining = 9 ;
+        var computerGuess = options[Math.floor(Math.random()*options.length)];
+        console.log("computerGuess",computerGuess);
+        document.onkeyup = function(event) {
+               
+        var userguess = event.key
+        console.log("userguess",userguess);
+        // console.log(userguess)
+        // if (userguess==='a'|| userguess=='b'|| userguess==='c' || userguess==='d' 
+        // ||userguess==='e' ||userguess==='f' || userguess==='g' ||userguess==='h' ||userguess=='i' ||userguess==='j' 
+        // ||userguess=='k' || userguess=== "l"|| userguess==='m' ||userguess==='n' ||userguess==='o' ||userguess=='q' ||userguess==='r' 
+        // ||userguess ==='t' || userguess ==='u' || userguess==='v'|| userguess ==='w' 
+        // || userguess == 'x'|| userguess =='y'|| userguess == 'z'){
+        // }
+        if (userguess===computerGuess) {
+        wins++;
+        console.log("wins++ "+wins++);
+        document.querySelector("#wins").innerHTML = wins;
+        // alert("You have won");
+        }
+         else 
+        {
+        console.log("losses++",losses++);
+        //any letter in the alphabet
+        alert("Please choose a, b, c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z"); 
+        }
+        }
+</script>
+</body>
+</html>
